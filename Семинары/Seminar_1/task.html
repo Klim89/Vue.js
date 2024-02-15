@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .fade-enter-active,
+        .fade-leave-active {
+            transition: opacity .5s;
+        }
+
+        .fade-enter,
+        .fade-leave-to {
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <h1 class="title">{{message}}</h1>
+        <p>Товаров в корзине {{count}}</p>
+        <button v-for="button in buttons" @click="buyButton(button)">
+            {{button.text}}
+        </button>
+        <button @click="allowOrder()">Мне исполнилось 14 лет</button>
+        <button @click="disallowOrder()">Мне еще нет 14 лет</button>
+        <p v-if="canOrder">{{status}}</p>
+        <p v-else>{{status}}</p>
+        <button v-on:click="show = !show">
+            Показать ещё
+        </button>
+        <transition name="fade">
+            <p v-if="show">Товар показан</p>
+        </transition>
+        <button @click="generateRandomNum()">Генерируй</button>
+        <p v-if="number<5">{{number}} меньше 5 </p>
+        <p v-if="number>=5 && number<=9">{{number}} от 5 до 9</p>
+        <p v-if="number==10">{{number}} равно 10</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                number: null,
+                canOrder: false,
+                message: 'Hello VUE',
+                count: 0,
+                show: false,
+                buttons: [
+                    { id: 1, text: 'Купить', inCart: false },
+                    { id: 2, text: 'Купить', inCart: false },
+                    { id: 3, text: 'Купить', inCart: false },
+                    { id: 4, text: 'Купить', inCart: false }
+                ],
+            },
+            methods: {
+                buyButton(button) {
+                    if (!button.inCart) {
+                        this.count++;
+                        button.inCart = true;
+                        button.text = 'Товар в корзине';
+                    }
+                },
+                allowOrder() {
+                    this.canOrder = true;
+                    this.status = 'Можете заказать товар';
+                },
+                disallowOrder() {
+                    this.canOrder = false;
+                    this.status = 'Доступ закрыт';
+                },
+                generateRandomNum() {
+                    this.number = Math.floor(Math.random() * 10) + 1;
+                },
+            },
+        });
+    </script>
+
+</body>
+
+</html>
