@@ -1,0 +1,47 @@
+<!-- Задание 3
+1. Вы разрабатываете приложение для создания списка 
+покупок. У вас есть массив объектов items, где каждый 
+объект представляет товар с его названием и 
+количеством. Вам необходимо отобразить список товаров, 
+предоставить возможность изменять количество каждого 
+товара и отмечать товары, которые уже куплены. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task_3</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1>Shopping List</h1>
+        <ul>
+            <li v-for="item in products">
+                <input type="checkbox" v-model="item.bought">
+                <span>{{ item.name }}</span> <span>{{ item.quantity }}</span> <span>{{ item.bought }}</span>
+                <input type="number" v-model="item.quantity" min="0">
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                products: [
+                    { id: 1, name: 'Молоко', quantity: 2, bought: false },
+                    { id: 2, name: 'Хлеб', quantity: 1, bought: true },
+                    { id: 3, name: 'Яблоки', quantity: 5, bought: false },
+                    { id: 4, name: 'Мясо', quantity: 0, bought: false }
+                ]
+            }
+        });
+
+    </script>
+</body>
+
+</html>

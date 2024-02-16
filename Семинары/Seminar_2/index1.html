@@ -1,0 +1,57 @@
+<!-- Задание 1
+1. Вы разрабатываете страницу для отображения 
+информации о товаре. У вас есть объект product, который 
+содержит информацию о товаре, включая название, цену 
+и URL изображения товара. Вам необходимо отобразить 
+эту информацию на странице с использованием v-bind.
+2. Добавьте кнопку, которая будет изменять цену товара. При 
+нажатии на кнопку должна генерироваться скидка на 
+товар от 1 до 20% и обновиться цена товара в 
+соответствии с значением скидки -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task_1</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <div>
+            <h2>{{ product.name }}</h2>
+            <img v-bind:src="product.imageUrl" alt="Изображение товара" style="max-width: 200px;">
+            <p>Цена: {{ product.price }} руб.</p>
+        </div>
+        <button @click="applyDiscount">Применить скидку</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                product: {
+                    blockWidth: 100,
+                    name: 'Смартфон Xiaomi Redmi 12 8/256GB Midnight Black',
+                    price: 13000,
+                    imageUrl: 'https://avatars.mds.yandex.net/get-mpic/12390131/2a0000018d670a7f7098178ab213704114a1/optimize'
+                }
+            },
+            methods: {
+                applyDiscount: function () {
+                    const discountPercentage = Math.floor(Math.random() * 20) + 1;
+                    const discountedPrice = this.product.price * (1 - discountPercentage / 100);
+                    this.product.price = discountedPrice.toFixed(2);
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>
