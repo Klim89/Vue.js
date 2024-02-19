@@ -1,0 +1,333 @@
+@import "vars";
+@import "mixins";
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.center {
+  padding-left: calc(50% - $widthContent / 2);
+  padding-right: calc(50% - $widthContent / 2);
+}
+
+.header {
+  margin-bottom: 57px;
+  margin-top: 53px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  &__logo {
+    @include font_style(40px, "DM Serif Display");
+    color: $colorBlackDM;
+    text-align: left;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+  &__logo img {
+    width: 34px;
+    height: 34px;
+  }
+  &__menu {
+    @include font_style(20px);
+    text-align: center;
+    display: flex;
+    gap: 48px;
+  }
+  &__link {
+    color: $colorBlackDM;
+  }
+}
+
+.banner {
+  &__block {
+    height: 758px;
+    background-image: url("img/banner.jpg");
+    background-repeat: no-repeat;
+    border-radius: 75px;
+  }
+  &__content {
+    padding: 208px 715px 0px 52px;
+  }
+  &__title {
+    margin-bottom: 18px;
+    @include font_style(65px, "DM Serif Display");
+    color: $colorBlackDM;
+  }
+  &__text {
+    margin-bottom: 21px;
+    @include font_style(22px, $lineHeight: 150%);
+    color: $colorGreyJost;
+  }
+  &__text-button {
+    width: 220px;
+    padding: 26px 0;
+    background-color: $colorBlackDM;
+    border-radius: 18px;
+    @include centerflex();
+    gap: 10px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    & p {
+      color: #fff;
+      @include font_style(18px, $fontWeight: 600);
+      letter-spacing: 0.36px;
+    }
+  }
+}
+
+.project {
+  margin-top: 96px;
+  margin-bottom: 96px;
+  &__title {
+    margin-bottom: 8px;
+    @include font_style(50px, "DM Serif Display");
+    color: $colorBlackDM;
+    text-align: center;
+    letter-spacing: 2%;
+  }
+  &__text {
+    @include font_style(22px, $lineHeight: 150%);
+    color: $colorGreyJost;
+    text-align: center;
+    letter-spacing: 1%;
+    padding-left: calc(50% - 368.5px);
+    padding-right: calc(50% - 368.5px);
+  }
+  &__item-block {
+    margin-top: 93px;
+    display: grid;
+    column-gap: 100px;
+    row-gap: 56px;
+    grid-template-columns: repeat(2, 550px);
+  }
+  &__item_img-1 {
+    border-top-right-radius: 75px;
+  }
+  &__item_img-2 {
+    border-top-left-radius: 75px;
+  }
+  &__item_img-3 {
+    border-bottom-right-radius: 75px;
+  }
+  &__item_img-4 {
+    border-bottom-left-radius: 75px;
+  }
+  &__item-content {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__item-title {
+    @include font_style(25px, "DM Serif Display");
+    color: $colorBlackDM;
+    text-align: left;
+    letter-spacing: 2%;
+  }
+  &__item-text {
+    @include font_style(22px, $lineHeight: 150%);
+    color: $colorGreyJost;
+    text-align: left;
+    letter-spacing: 1%;
+  }
+}
+
+.info-block {
+  padding-top: 151px;
+  padding-bottom: 151px;
+  background-color: rgb(244, 240, 236);
+  &__container {
+    padding-left: 59px;
+    padding-right: 59px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+  &__item {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-direction: column;
+    padding-right: 60px;
+    border-right: 1px solid $colorBrownDM;
+    height: 130px;
+    &:last-child {
+      border-right: none;
+    }
+  }
+  &__item-title {
+    color: $colorBrownDM;
+    @include font_style(85px, "DM Serif Display");
+    letter-spacing: 2%;
+    text-align: center;
+  }
+  &__item-text {
+    @include font_style(22px, $lineHeight: 150%);
+    color: $colorGreyJost;
+    text-align: left;
+    letter-spacing: 1%;
+  }
+}
+
+.blog {
+  margin-top: 96px;
+  margin-bottom: 96px;
+  &__title {
+    margin-bottom: 12px;
+    @include font_style(50px, "DM Serif Display");
+    color: $colorBlackDM;
+    letter-spacing: 2%;
+    text-align: center;
+  }
+  &__text {
+    padding-left: calc(widthContent - 405.5px);
+    padding-right: calc(widthContent - 405.5px);
+    margin-bottom: 52px;
+    @include font_style(22px, $lineHeight: 150%);
+    color: $colorGreyJost;
+    letter-spacing: 1%;
+    text-align: center;
+  }
+  &__item-block {
+    display: grid;
+    grid-template-columns: repeat(3, 382px);
+    gap: 27px;
+  }
+  &__item {
+    border: 1px solid rgb(231, 231, 231);
+    box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.25);
+    border-radius: 62px;
+    padding: 21px;
+    &:hover {
+      background: rgb(244, 240, 236);
+    }
+  }
+  &__item-image {
+    position: relative;
+    & img {
+      border-top-left-radius: 62px;
+      border-top-right-radius: 62px;
+      margin-bottom: 21px;
+    }
+  }
+  &__img-text {
+    position: absolute;
+    left: 20px;
+    top: 228px;
+    border-radius: 8px 8px 8px 0px;
+    background: rgb(255, 255, 255);
+    padding: 4px 10px 8px 11px;
+    @include font_style(16px, $lineHeight: 150%);
+    color: $colorGreyJost;
+    letter-spacing: 1%;
+    text-align: left;
+    text-transform: capitalize;
+  }
+  &__item-title {
+    margin-bottom: 30px;
+    color: #292f36;
+    @include font_style(25px, "DM Serif Display");
+    color: $colorBlackDM;
+    letter-spacing: 2%;
+    text-align: left;
+  }
+  &__text-down {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    & svg circle:hover {
+      fill: white;
+    }
+  }
+  &__item-text {
+    @include font_style(16px, $lineHeight: 150%);
+    color: $colorGreyJost;
+    letter-spacing: 1%;
+    text-align: left;
+    text-transform: capitalize;
+  }
+}
+
+.footer {
+  margin-top: 96px;
+  padding-bottom: 134px;
+  display: flex;
+  gap: 101px;
+
+  &__left-block {
+    width: 393px;
+  }
+  &__left-text {
+    margin-top: 18px;
+    margin-bottom: 31px;
+    @include font_style(22px, $lineHeight: 150%);
+    letter-spacing: 1%;
+    text-align: left;
+    color: $colorGreyJost;
+  }
+  &__icon {
+    display: flex;
+    gap: 54px;
+  }
+  &__center-block {
+    width: 125px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__menu-text {
+    margin-bottom: 9px;
+    @include font_style(25px, "DM Serif Display");
+    color: $colorBlackDM;
+    letter-spacing: 0%;
+    text-align: left;
+  }
+  &__menu-link {
+    @include font_style(22px, $lineHeight: 300%);
+    letter-spacing: 1%;
+    text-align: left;
+    color: $colorGreyJost;
+  }
+  &__contact {
+    width: 258px;
+    &-title {
+      margin-bottom: 26px;
+      @include font_style(25px, "DM Serif Display");
+      color: $colorBlackDM;
+      letter-spacing: 0%;
+      text-align: left;
+    }
+    &-text {
+      @include font_style(22px, $lineHeight: 150%);
+      letter-spacing: 1%;
+      color: $colorGreyJost;
+    }
+    &-email {
+      @include font_style(22px, $lineHeight: 300%);
+      letter-spacing: 1%;
+      color: $colorGreyJost;
+    }
+    &-phone {
+      @include font_style(22px, $lineHeight: 150%);
+      letter-spacing: 1%;
+      color: $colorGreyJost;
+    }
+  }
+}
