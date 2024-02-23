@@ -1,5 +1,7 @@
 .banner-blog {
   background-image: url("img/banner_block.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
   height: 356px;
   display: flex;
   justify-content: center;
