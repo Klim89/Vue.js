@@ -161,7 +161,7 @@
   width: 800px;
 }
 
-.article:not(:last-child)::after {
+.article {
   margin-bottom: 96px;
 }
 .article__title {
@@ -257,10 +257,9 @@
 }
 
 .tags__buttons-block {
+  width: 345px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
   gap: 24px;
 }
 .tags__title {
@@ -272,10 +271,6 @@
   color: rgb(41, 47, 54);
   letter-spacing: 2%;
   text-align: left;
-}
-.tags__buttons {
-  display: flex;
-  gap: 10px;
 }
 .tags__buttons-item {
   cursor: pointer;
@@ -295,6 +290,12 @@
 .tags__buttons-item:hover {
   background: rgb(41, 47, 54);
   color: rgb(255, 255, 255);
+}
+.tags__buttons-item:not(:last-child, :nth-last-child(2)) {
+  margin-bottom: 11px;
+}
+.tags__buttons-item:not(:nth-child(2n)) {
+  margin-right: 10px;
 }
 
 .info-blok {
@@ -668,7 +669,6 @@ a {
 }
 
 .footer {
-  margin-top: 96px;
   padding-bottom: 134px;
   display: flex;
   gap: 101px;

@@ -27,7 +27,6 @@
   &__text {
     @include font_style(22px, $lineHeight: 150%);
     color: $colorGreyJost;
-    // text-align: left;
     letter-spacing: 1%;
   }
 }

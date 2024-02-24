@@ -84,7 +84,9 @@ Vue.component("tags-component", {
           <div class="tags__buttons-block">
              <h2 class="tags__title">Tags</h2>
              <div class="tags__buttons">
-                <button v-for="tag in buttonsBlock" @click="filterClick(tag)" class="tags__buttons-item">{{ tag }}</button>
+                <div class="tags__button">
+                  <button v-for="tag in buttonsBlock" @click="filterClick(tag)" class="tags__buttons-item">{{ tag }}</button>
+                </div>
              </div>
           </div>
        </div>
@@ -111,14 +113,3 @@ Vue.component("tags-component", {
 new Vue({
   el: ".blog__details-block",
 });
-
-// methods: {
-//     changeImage(index) {
-//         this.currentIndex = index;
-//     }
-// },
-// computed: {
-//     currentImage() {
-//         return this.images[this.currentIndex];
-//     },
-// }

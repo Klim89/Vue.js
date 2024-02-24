@@ -12,9 +12,7 @@
 }
 
 .article {
-  &:not(:last-child)::after {
-    margin-bottom: 96px;
-  }
+  margin-bottom: 96px;
   &__title {
     @include font_style(50px, "DM Serif Display");
     color: $colorBlackDM;
@@ -86,10 +84,9 @@
 
 .tags {
   &__buttons-block {
+    width: 345px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
     gap: 24px;
   }
   &__title {
@@ -99,8 +96,6 @@
     text-align: left;
   }
   &__buttons {
-    display: flex;
-    gap: 10px;
     &-item {
       cursor: pointer;
       background: rgb(244, 240, 236);
@@ -114,6 +109,12 @@
       &:hover {
         background: rgb(41, 47, 54);
         color: rgb(255, 255, 255);
+      }
+      &:not(:last-child, :nth-last-child(2)) {
+        margin-bottom: 11px;
+      }
+      &:not(:nth-child(2n)) {
+        margin-right: 10px;
       }
     }
   }
