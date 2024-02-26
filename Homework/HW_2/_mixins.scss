@@ -1,0 +1,13 @@
+@mixin font_style($fontSize, $fontFamily: "Jost", $lineHeight: 125%, $fontWeight: 400, $fontStyle: normal) {
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    font-style: $fontStyle;
+    font-weight: $fontWeight;
+    line-height: $lineHeight;
+}
+
+@mixin centerflex() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
