@@ -1,0 +1,148 @@
+@import "vars";
+@import "mixins";
+
+.blog-details__container {
+  margin-top: 200px;
+  display: flex;
+  gap: 52px;
+}
+
+.blog-details {
+  width: 800px;
+}
+
+.article {
+  margin-bottom: 96px;
+  &__title {
+    @include font_style(50px, "DM Serif Display");
+    color: $colorBlackDM;
+    letter-spacing: 2%;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  &__img {
+    margin-top: 21px;
+    margin-bottom: 35px;
+    border-radius: 50px;
+  }
+  &__info {
+    @include font_style(16px, $lineHeight: 150%);
+    color: $colorGreyJost;
+    letter-spacing: 1%;
+    text-align: left;
+    text-transform: capitalize;
+    margin-top: 11px;
+    margin-bottom: 46px;
+    display: flex;
+    gap: 409px;
+    &-bredcrumbs {
+      display: inline-block;
+      @include font_style(16px, $lineHeight: 150%);
+      color: $colorGreyJost;
+      text-align: left;
+      text-transform: capitalize;
+      &:not(:last-child)::after {
+        content: "/";
+        padding-left: 5px;
+      }
+    }
+  }
+  &__text {
+    @include font_style(22px, $lineHeight: 150%);
+    color: $colorGreyJost;
+    letter-spacing: 1%;
+    text-align: left;
+  }
+  &__list {
+    margin-top: 24px;
+    margin-bottom: 23px;
+    display: flex;
+    width: 732.39px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    list-style-position: 10px 0;
+    &-num {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      &-text {
+        color: $colorBrownDM;
+        @include font_style(20px, "DM Serif Display");
+        line-height: 125%;
+        letter-spacing: 0.4px;
+      }
+    }
+    &-item {
+      @include font_style(22px, $lineHeight: 150%);
+      color: $colorGreyJost;
+      letter-spacing: 1%;
+      text-align: left;
+    }
+  }
+}
+
+.tags {
+  &__buttons-block {
+    width: 345px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  &__title {
+    @include font_style(25px, "DM Serif Display");
+    color: $colorBlackDM;
+    letter-spacing: 2%;
+    text-align: left;
+  }
+  &__buttons {
+    &-item {
+      cursor: pointer;
+      background: rgb(244, 240, 236);
+      padding: 9px 30px 9px 30px;
+      border-radius: 10px;
+      border: none;
+      @include font_style(18px);
+      color: $colorGreyJost;
+      letter-spacing: 2%;
+      text-align: center;
+      &:hover {
+        background: rgb(41, 47, 54);
+        color: rgb(255, 255, 255);
+      }
+      &:not(:last-child, :nth-last-child(2)) {
+        margin-bottom: 11px;
+      }
+      &:not(:nth-child(2n)) {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.info-blok {
+  margin-bottom: 27px;
+  margin-top: 35px;
+  padding: 53px 227px;
+  background: rgb(244, 240, 236);
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  &__quotation-marks {
+    width: 106px;
+    height: 133px;
+    flex-shrink: 0;
+    color: $colorBrownDM;
+    @include font_style(200px, "DM Serif Display", $fontStyle: italic);
+    letter-spacing: 2%;
+    text-align: center;
+  }
+  &__text {
+    color: $colorBrownDM;
+    @include font_style(25px, "DM Serif Display", $fontStyle: italic);
+    letter-spacing: 2%;
+    text-align: center;
+  }
+}

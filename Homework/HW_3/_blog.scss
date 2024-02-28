@@ -3,10 +3,15 @@
 
 .banner-blog {
   background-image: url("img/banner_block.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
   height: 356px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  &_details {
+    background-image: url("img/blog-details-banner.jpg");
+  }
   &__intro {
     text-align: center;
     background: rgb(255, 255, 255);
@@ -22,7 +27,6 @@
   &__text {
     @include font_style(22px, $lineHeight: 150%);
     color: $colorGreyJost;
-    // text-align: left;
     letter-spacing: 1%;
   }
 }

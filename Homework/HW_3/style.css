@@ -1,9 +1,14 @@
 .banner-blog {
   background-image: url("img/banner_block.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
   height: 356px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
+}
+.banner-blog_details {
+  background-image: url("img/blog-details-banner.jpg");
 }
 .banner-blog__intro {
   text-align: center;
@@ -144,6 +149,188 @@
 }
 .pagination svg circle:hover {
   fill: rgb(244, 240, 236);
+}
+
+.blog-details__container {
+  margin-top: 200px;
+  display: flex;
+  gap: 52px;
+}
+
+.blog-details {
+  width: 800px;
+}
+
+.article {
+  margin-bottom: 96px;
+}
+.article__title {
+  font-family: "DM Serif Display";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  color: rgb(41, 47, 54);
+  letter-spacing: 2%;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.article__img {
+  margin-top: 21px;
+  margin-bottom: 35px;
+  border-radius: 50px;
+}
+.article__info {
+  font-family: "Jost";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  color: rgb(77, 80, 83);
+  letter-spacing: 1%;
+  text-align: left;
+  text-transform: capitalize;
+  margin-top: 11px;
+  margin-bottom: 46px;
+  display: flex;
+  gap: 409px;
+}
+.article__info-bredcrumbs {
+  display: inline-block;
+  font-family: "Jost";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  color: rgb(77, 80, 83);
+  text-align: left;
+  text-transform: capitalize;
+}
+.article__info-bredcrumbs:not(:last-child)::after {
+  content: "/";
+  padding-left: 5px;
+}
+.article__text {
+  font-family: "Jost";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  color: rgb(77, 80, 83);
+  letter-spacing: 1%;
+  text-align: left;
+}
+.article__list {
+  margin-top: 24px;
+  margin-bottom: 23px;
+  display: flex;
+  width: 732.39px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  list-style-position: 10px 0;
+}
+.article__list-num {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+.article__list-num-text {
+  color: rgb(205, 162, 116);
+  font-family: "DM Serif Display";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  line-height: 125%;
+  letter-spacing: 0.4px;
+}
+.article__list-item {
+  font-family: "Jost";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  color: rgb(77, 80, 83);
+  letter-spacing: 1%;
+  text-align: left;
+}
+
+.tags__buttons-block {
+  width: 345px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.tags__title {
+  font-family: "DM Serif Display";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  color: rgb(41, 47, 54);
+  letter-spacing: 2%;
+  text-align: left;
+}
+.tags__buttons-item {
+  cursor: pointer;
+  background: rgb(244, 240, 236);
+  padding: 9px 30px 9px 30px;
+  border-radius: 10px;
+  border: none;
+  font-family: "Jost";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  color: rgb(77, 80, 83);
+  letter-spacing: 2%;
+  text-align: center;
+}
+.tags__buttons-item:hover {
+  background: rgb(41, 47, 54);
+  color: rgb(255, 255, 255);
+}
+.tags__buttons-item:not(:last-child, :nth-last-child(2)) {
+  margin-bottom: 11px;
+}
+.tags__buttons-item:not(:nth-child(2n)) {
+  margin-right: 10px;
+}
+
+.info-blok {
+  margin-bottom: 27px;
+  margin-top: 35px;
+  padding: 53px 227px;
+  background: rgb(244, 240, 236);
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.info-blok__quotation-marks {
+  width: 106px;
+  height: 133px;
+  flex-shrink: 0;
+  color: rgb(205, 162, 116);
+  font-family: "DM Serif Display";
+  font-size: 200px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 2%;
+  text-align: center;
+}
+.info-blok__text {
+  color: rgb(205, 162, 116);
+  font-family: "DM Serif Display";
+  font-size: 25px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 2%;
+  text-align: center;
 }
 
 html {
@@ -482,7 +669,6 @@ a {
 }
 
 .footer {
-  margin-top: 96px;
   padding-bottom: 134px;
   display: flex;
   gap: 101px;
