@@ -1,0 +1,40 @@
+<template>
+  <div>
+    <h2>Аутентификация</h2>
+    <div v-if="isAuthenticated">
+      <p>Успешная аутентификация! Добро пожаловать!</p>
+    </div>
+    <div v-else>
+      <form @submit="login">
+        <label for="username">Имя пользователя:</label>
+        <input type="text" id="username" v-model="username" required>
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" v-model="password" required>
+        <button type="submit">Войти</button>
+      </form>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      username: '',
+      password: '',
+      isAuthenticated: false
+    };
+  },
+  methods: {
+    login(event) {
+      event.preventDefault();
+      // Здесь можно добавить логику для проверки аутентификации
+      // При успешной аутентификации установите значение isAuthenticated на true
+      this.isAuthenticated = true;
+      // Очистить поля ввода
+      this.username = '';
+      this.password = '';
+    }
+  }
+};
+</script>

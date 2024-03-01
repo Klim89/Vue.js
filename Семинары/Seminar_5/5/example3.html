@@ -1,0 +1,80 @@
+<template>
+    <div>
+        <h2>Список книг</h2>
+        <ul>
+            <li v-for="book in books" :key="book.id" @click="toggleDetails(book)">
+                <Book :book="book" />
+            </li>
+        </ul>
+    </div>
+</template>
+  
+<script>
+import Book from './BookInfo.vue'; // Импорт компонента "Книга"
+import Vue from 'vue';
+
+export default {
+    components: {
+        Book
+    },
+    data() {
+        return {
+            books: [
+                { id: 1, title: 'Книга 1', author: 'Автор 1', year: 2020, showDetails: false },
+                { id: 2, title: 'Книга 2', author: 'Автор 2', year: 2019, showDetails: false },
+                { id: 3, title: 'Книга 3', author: 'Автор 3', year: 2021, showDetails: false }
+            ]
+        };
+    },
+    methods: {
+        toggleDetails(book) {
+            Vue.set(book, 'showDetails', !book.showDetails);
+        }
+    }
+};
+</script>
+  
+
+<template>
+    <div class="book" @click="toggleDetails">
+        <h3>{{ localBook.title }}</h3>
+        <p>Автор: {{ localBook.author }}</p>
+        <p>Год издания: {{ localBook.year }}</p>
+        <div v-if="showDetails">
+            <p>Дополнительные детали о книге</p>
+            <!-- Дополнительные детали о книге -->
+        </div>
+    </div>
+</template>
+  
+<script>
+export default {
+    props: {
+        book: {
+            type: Object,
+            required: true
+        }
+    },
+    data() {
+        return {
+            showDetails: false,
+            localBook: {}
+        };
+    },
+    mounted() {
+        this.localBook = { ...this.book }; // Создаем локальную копию объекта книги
+    },
+    methods: {
+        toggleDetails() {
+            this.showDetails = !this.showDetails;
+        }
+    }
+};
+</script>
+  
+<style scoped>
+.book {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+</style>

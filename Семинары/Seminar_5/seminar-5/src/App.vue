@@ -1,15 +1,23 @@
 <template>
   <div id="app">
+    <AuthComp></AuthComp>
+    <CartComp></CartComp>
+    <CalcComp></CalcComp>
   </div>
 </template>
-
 <script>
+import AuthComp from './components/AuthComp.vue';
+import CalcComp from './components/CalcComp.vue';
+import CartComp from './components/CartComp.vue';
+
 
 export default {
   name: 'App',
   components: {
-    
-  }
+    AuthComp,
+    CartComp,
+    CalcComp
+}
 }
 </script>
 
