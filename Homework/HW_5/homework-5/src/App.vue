@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <HeaderComp></HeaderComp>
+    <ProductDetails></ProductDetails>
     <FooterComp></FooterComp>
   </div>
 </template>
@@ -8,12 +9,14 @@
 <script>
 import HeaderComp from './components/HeaderComp.vue';
 import FooterComp from './components/FooterComp.vue';
+import ProductDetails from './components/ProductDetails.vue';
 
 export default {
   name: 'App',
   components: {
     HeaderComp,
-    FooterComp
+    FooterComp,
+    ProductDetails
   }
 }
 </script>
