@@ -1,3 +1,11 @@
+<!-- Разработка приложения для отображения информации о книгах
+Требуется создать компонент "Книга" (Book), который будет
+отображать информацию о книге, такую как название, автор и год
+издания. Компонент "Книга" должен иметь возможность отображать
+дополнительные детали о книге по требованию пользователя. Также
+необходимо создать компонент "Список книг" (BookList), который
+будет отображать список книг из переданного массива -->
+
 <template>
   <ul>
     <BookComponent :book="book" v-for="book in books" :key="book.id"/>
@@ -8,7 +16,7 @@
 import BookComponent from './BookComponent.vue'
 
 export default {
-  name: 'HelloWorld',
+  name: 'BookList',
   components: {
     BookComponent
   },
@@ -25,7 +33,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h3 {
   margin: 40px 0 0;

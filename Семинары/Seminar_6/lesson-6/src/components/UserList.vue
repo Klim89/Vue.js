@@ -1,3 +1,9 @@
+<!-- Создайте компонент "Список пользователей" (UserList), который
+будет отображать список пользователей из переданного массива.
+Каждый пользователь должен быть представлен в виде отдельного
+компонента "Пользователь" (User), принимающего пропсы с данными
+о пользователе (например, имя, фамилия и электронная почта). -->
+
 <template>
 <ul>
   <UserComponent :user="user" v-for="user in users" :key="user.id"/>
@@ -7,7 +13,7 @@
 <script>
 import UserComponent from './UserComponent.vue'
 export default {
-  name: 'HelloWorld',
+  name: 'UserList',
   components: {
     UserComponent
   },

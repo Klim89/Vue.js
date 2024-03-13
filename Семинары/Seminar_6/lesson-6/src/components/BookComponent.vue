@@ -17,7 +17,7 @@
 import Vue from "vue";
 
 export default {
-  name: "UserComponent",
+  name: "BookComponent",
   props: {
     book: {
       type: Object,
