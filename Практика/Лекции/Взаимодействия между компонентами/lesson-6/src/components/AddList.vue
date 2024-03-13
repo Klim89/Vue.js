@@ -31,7 +31,7 @@ export default {
         onSave() {
             const data = {
                 value: +this.value,
-                category: +this.category,
+                category: this.category,
                 data: +this.data || this.getCurrentDate,
             }
             this.$emit('addNewPay', data);
