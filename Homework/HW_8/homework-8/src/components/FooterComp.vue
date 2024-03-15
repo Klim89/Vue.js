@@ -2,7 +2,7 @@
     <footer class="footer center">
         <div class="footer__left-block">
             <div class="header__logo">
-                <a href="#"><img src="../assets/images/logo.jpg" alt="logo"></a>
+                <router-link to="/"><img src="@/assets/images/logo.jpg" alt="logo"></router-link>
                 <p class="header__text-logo">Interno</p>
             </div>
             <p class="footer__left-text">It&nbsp;is&nbsp;a&nbsp;long established fact that a&nbsp;reader will
@@ -22,9 +22,9 @@
         </div>
         <div class="footer__center-block">
             <p class="footer__menu-text">Pages</p>
-            <a class="footer__menu-link" href="#">Home</a>
-            <a class="footer__menu-link" href="#">Project</a>
-            <a class="footer__menu-link" href="#">Blog</a>
+            <router-link class="footer__menu-link" to="/">Home</router-link>
+            <router-link class="footer__menu-link" to="/Project">Project</router-link>
+            <router-link class="footer__menu-link" to="/Blog">Blog</router-link>
         </div>
         <div class="footer__right-block"></div>
         <div class="footer__contact">

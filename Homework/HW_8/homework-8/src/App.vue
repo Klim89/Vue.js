@@ -1,84 +1,8 @@
 <template>
   <div id="app">
-    <div class="homepage">
-      <HeaderComp></HeaderComp>
-      <HomeBanner></HomeBanner>
-      <HomeProject></HomeProject>
-      <HomeInfo></HomeInfo>
-      <HomeArticle></HomeArticle>
-      <FooterComp></FooterComp>
-    </div>
-    <div class="blog-page">
-      <HeaderComp></HeaderComp>
-      <BlogBanner></BlogBanner>
-      <BlogPost></BlogPost>
-      <BlogArticle></BlogArticle>
-      <BlogPagination></BlogPagination>
-      <FooterComp></FooterComp>
-    </div>
-    <div class="blog-details">
-      <HeaderComp></HeaderComp>
-      <BlogDetailsBanner></BlogDetailsBanner>
-      <BlogDetailsArticle></BlogDetailsArticle>
-      <FooterComp></FooterComp>
-    </div>
-    <div class="project-page">
-      <HeaderComp></HeaderComp>
-      <ProjectBanner></ProjectBanner>
-      <ProjectMainContent></ProjectMainContent>
-      <BlogPagination></BlogPagination>
-      <FooterComp></FooterComp>
-    </div>
-    <div class="project-details-page">
-      <HeaderComp></HeaderComp>
-      <ProjectDetailsBanner></ProjectDetailsBanner>
-      <ProjectDetailsContent></ProjectDetailsContent>
-      <FooterComp></FooterComp>
-    </div>
+    <router-view />
   </div>
 </template>
-
-<script>
-import HeaderComp from './components/HeaderComp.vue';
-import FooterComp from './components/FooterComp.vue';
-import HomeProject from './components//HomePage/HomeProject.vue';
-import HomeBanner from './components/HomePage/HomeBanner.vue';
-import HomeInfo from './components/HomePage/HomeInfo.vue';
-import HomeArticle from './components/HomePage/HomeArticle.vue';
-import BlogBanner from './components/BlogPage/BlogBanner.vue';
-import BlogPost from './components/BlogPage/BlogPost.vue';
-import BlogArticle from './components/BlogPage/BlogArticle.vue';
-import BlogPagination from './components/BlogPage/BlogPagination.vue';
-import BlogDetailsBanner from './components/BlogDetails/BlogDetailsBanner.vue';
-import BlogDetailsArticle from './components/BlogDetails/BlogDetailsArticle.vue';
-import ProjectBanner from './components/ProjectPage/ProjectBanner.vue';
-import ProjectMainContent from './components/ProjectPage/ProjectMainContent.vue';
-import ProjectDetailsBanner from './components/ProjectDetails/ProjectDetailsBanner.vue';
-import ProjectDetailsContent from './components/ProjectDetails/ProjectDetailsContent.vue';
-
-
-export default {
-  name: 'App',
-  components: {
-    HeaderComp,
-    FooterComp,
-    HomeProject,
-    HomeBanner,
-    HomeInfo,
-    HomeArticle,
-    BlogBanner,
-    BlogPost,
-    BlogArticle,
-    BlogPagination,
-    BlogDetailsBanner,
-    BlogDetailsArticle,
-    ProjectBanner,
-    ProjectMainContent,
-    ProjectDetailsBanner,
-    ProjectDetailsContent
-  }
-}
-</script>
 
 <style lang="scss">
 $widthContent: 1200px;

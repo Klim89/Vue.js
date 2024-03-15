@@ -1,7 +1,6 @@
-# homework-7
+# homework-8
 
-Установите VueX и добавьте к проекту.
-Приступаем к вёрстке новой страницы project details (https://www.figma.com/file/okdYD45Tj2JpKsNASccUmf/Interior-Design-Webflow-Website-Template-(Community)-(Copy)-(Copy)?type=design&node-id=1418-15&mode=design&t=ebkazpiG5BOth8x7-0):
+Добавить переключение страниц через Vue Router. • Сделать страницу 404, которая будет появляться, если пользователь переходит по несуществующей ссылке. • Доделать проект, если остались недоделанные части.
 
 Информацию про описание проекта вынести в state.
 

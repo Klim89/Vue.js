@@ -7,11 +7,14 @@
                 <h3 class="post__title">Low Cost Latest Invented Interior<br>Designing Ideas</h3>
                 <p class="post__text">Lorem ipsum dolor sit amet, adipiscing Aliquam eu&nbsp;sem vitae turpis
                     dignissim maximus. posuere&nbsp;in. Contrary to&nbsp;popular belief.</p>
-                <p class="post__text">Lorem Ipsum is&nbsp;not simply random text. It&nbsp;has roots in&nbsp;a&nbsp;piece of
+                <p class="post__text">Lorem Ipsum is&nbsp;not simply random text. It&nbsp;has roots in&nbsp;a&nbsp;piece
+                    of
                     classica.</p>
                 <div class="post__footer">
                     <p class="post__date">26&nbsp;December, 2022</p>
-                    <img src="../../assets/images/arrow_left_2.svg" alt="arrow">
+                    <router-link to="/blog-details">
+                        <img src="../../assets/images/arrow_left_2.svg" alt="arrow">
+                    </router-link>
                 </div>
             </div>
         </div>

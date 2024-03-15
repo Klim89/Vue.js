@@ -49,6 +49,7 @@ $colorBrownDM: rgb(205, 162, 116);
     justify-content: center;
     align-items: center;
 }
+
 .pagination {
     margin-top: 51px;
     margin-bottom: 200px;
