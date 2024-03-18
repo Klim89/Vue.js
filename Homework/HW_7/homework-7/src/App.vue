@@ -29,6 +29,12 @@
       <BlogPagination></BlogPagination>
       <FooterComp></FooterComp>
     </div>
+    <div class="project-details-page">
+      <HeaderComp></HeaderComp>
+      <ProjectDetailsBanner></ProjectDetailsBanner>
+      <ProjectDetailsContent></ProjectDetailsContent>
+      <FooterComp></FooterComp>
+    </div>
   </div>
 </template>
 
@@ -47,6 +53,9 @@ import BlogDetailsBanner from './components/BlogDetails/BlogDetailsBanner.vue';
 import BlogDetailsArticle from './components/BlogDetails/BlogDetailsArticle.vue';
 import ProjectBanner from './components/ProjectPage/ProjectBanner.vue';
 import ProjectMainContent from './components/ProjectPage/ProjectMainContent.vue';
+import ProjectDetailsBanner from './components/ProjectDetails/ProjectDetailsBanner.vue';
+import ProjectDetailsContent from './components/ProjectDetails/ProjectDetailsContent.vue';
+
 
 export default {
   name: 'App',
@@ -64,7 +73,9 @@ export default {
     BlogDetailsBanner,
     BlogDetailsArticle,
     ProjectBanner,
-    ProjectMainContent
+    ProjectMainContent,
+    ProjectDetailsBanner,
+    ProjectDetailsContent
   }
 }
 </script>
